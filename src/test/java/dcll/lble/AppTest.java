@@ -50,4 +50,33 @@ public class AppTest
         assertFalse(cartTest.isEmpty());
     }
 
+    public void testGetSize()
+    {
+        SimpleStackImpl cartTest = new SimpleStackImpl();
+        assertTrue(cartTest.getSize() == 0);
+    }
+
+    public void testPush()
+    {
+        SimpleStackImpl cartTest = new SimpleStackImpl();
+        cartTest.push(new Item("Test"));
+        assertTrue(cartTest.getSize() == 1);
+    }
+
+    public void testPeek() throws EmptyStackException {
+        SimpleStackImpl cartTest = new SimpleStackImpl();
+        Item test = new Item("Test");
+        cartTest.push(test);
+        assertTrue(cartTest.peek().equals(test));
+        assertTrue(cartTest.getSize() == 1);
+    }
+
+    public void testPop() throws EmptyStackException {
+        SimpleStackImpl cartTest = new SimpleStackImpl();
+        Item test = new Item("Test");
+        cartTest.push(test);
+        assertTrue(cartTest.pop().equals(test));
+        assertTrue(cartTest.getSize() == 0);
+    }
+
 }
