@@ -31,8 +31,23 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testNom()
     {
-        assertTrue( true );
+        Item item1 = new Item("Test");
+        assertTrue(item1.nom.equals("Test"));
     }
+
+    public void testIsEmptyTrue()
+    {
+        SimpleStackImpl cartTest = new SimpleStackImpl();
+        assertTrue(cartTest.isEmpty());
+    }
+
+    public void testIsEmptyFalse()
+    {
+        SimpleStackImpl cartTest = new SimpleStackImpl();
+        cartTest.push(new Item("Test"));
+        assertFalse(cartTest.isEmpty());
+    }
+
 }
