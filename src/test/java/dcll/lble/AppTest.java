@@ -31,6 +31,9 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+
+    public void testApp(){assertTrue(true);}
+
     public void testNom()
     {
         Item item1 = new Item("Test");
