@@ -9,31 +9,34 @@ public class SimpleStackImpl implements SimpleStack {
     private ArrayList<Item> stock;
 
     public SimpleStackImpl(){
-        this.stock = new ArrayList<Item>();
+        stock = new ArrayList<Item>();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return stock.isEmpty();
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return stock.size();
     }
 
     @Override
     public void push(Item item) {
-
+        stock.add(item);
+        System.out.println("Item ajoute");
     }
 
     @Override
     public Item peek() throws EmptyStackException {
-        return null;
+        return stock.get(this.getSize()-1);
     }
 
     @Override
     public Item pop() throws EmptyStackException {
-        return null;
+        Item item = stock.get(this.getSize()-1);
+        stock.remove(this.getSize()-1);
+        return item;
     }
 }
