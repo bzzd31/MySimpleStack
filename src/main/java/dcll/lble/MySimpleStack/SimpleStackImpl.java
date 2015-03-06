@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 /**
  * Created by 21003573 on 13/02/2015.
+ *
+ * Un commentaire répondant à l'exigence #3
  */
 public class SimpleStackImpl implements SimpleStack {
     private ArrayList<Item> stock;
