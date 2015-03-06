@@ -1,13 +1,14 @@
 package dcll.lble;
 
+import dcll.lble.MySimpleStack.EmptyStackException;
+import dcll.lble.MySimpleStack.Item;
+import dcll.lble.MySimpleStack.SimpleStackImpl;
+
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         SimpleStackImpl cart = new SimpleStackImpl();
         Item item1 = new Item("Fromage");
         Item item2 = new Item("Yahourt");
@@ -19,15 +20,15 @@ public class App
         cart.push(item2);
         cart.push(item3);
         cart.push(item4);
-        System.out.println("Taille : " +cart.getSize()+", c'est vide ? -> " + cart.isEmpty());
+        System.out.println("Taille : " + cart.getSize() + ", c'est vide ? -> " + cart.isEmpty());
         try {
             Item item5 = cart.peek();
-            System.out.println("Item peeked : " + item5.nom);
+            System.out.println("Item peeked : " + item5.getNom());
             Item item6 = cart.pop();
-            System.out.println("Item popped : " + item6.nom);
+            System.out.println("Item popped : " + item6.getNom());
         } catch (EmptyStackException e) {
             e.printStackTrace();
         }
-        System.out.println("Taille : " +cart.getSize()+", c'est vide ? -> " + cart.isEmpty());
+        System.out.println("Taille : " + cart.getSize() + ", c'est vide ? -> " + cart.isEmpty());
     }
 }

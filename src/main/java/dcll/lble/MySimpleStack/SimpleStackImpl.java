@@ -1,4 +1,6 @@
-package dcll.lble;
+package dcll.lble.MySimpleStack;
+
+import dcll.lble.SimpleStack;
 
 import java.util.ArrayList;
 
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 public class SimpleStackImpl implements SimpleStack {
     private ArrayList<Item> stock;
 
-    public SimpleStackImpl(){
+    public SimpleStackImpl() {
         stock = new ArrayList<Item>();
     }
 
@@ -30,13 +32,13 @@ public class SimpleStackImpl implements SimpleStack {
 
     @Override
     public Item peek() throws EmptyStackException {
-        return stock.get(this.getSize()-1);
+        return stock.get(this.getSize() - 1);
     }
 
     @Override
     public Item pop() throws EmptyStackException {
-        Item item = stock.get(this.getSize()-1);
-        stock.remove(this.getSize()-1);
+        Item item = stock.get(this.getSize() - 1);
+        stock.remove(this.getSize() - 1);
         return item;
     }
 }

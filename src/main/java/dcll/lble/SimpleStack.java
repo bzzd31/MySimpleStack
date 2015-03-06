@@ -1,5 +1,8 @@
 package dcll.lble;
 
+import dcll.lble.MySimpleStack.EmptyStackException;
+import dcll.lble.MySimpleStack.Item;
+
 /**
  * Created by 21003573 on 13/02/2015.
  */
